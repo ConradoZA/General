@@ -1,57 +1,102 @@
-*{
-margin:0px;
-padding:0px;
+* {
+    margin: 0px;
+    padding: 0px;
 }
-body{
+
+body {
     font-family: Georgia, Times, serif;
     color: #222222;
     background-color: #dddddd;
 }
-h1{
+
+h1 {
     margin: 11rem auto 3rem;
     text-align: center;
 }
+
 nav {
-    display:inline-flex;
+    display: inline-flex;
     justify-content: space-between;
-    width:100%;
+    width: 100%;
     background-color: #222222;
-    padding:0.5rem 0;
-    position:fixed;
-    top:0;
-    left:0;
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-nav div{
-    display:inline-flex;
+
+nav div {
+    display: inline-flex;
     justify-content: flex-end;
 }
 
-nav div a{
-    display:block;
+nav div a {
+    display: block;
     background-color: #000000;
-    color:#dddddd;
-    text-decoration:none;
-    padding:.1rem 10px;
+    color: #dddddd;
+    text-decoration: none;
+    padding: .1rem 10px;
     margin: 0 .5rem;
     border-radius: 7px;
     transition: all 300ms linear;
 }
-nav div a:hover{
-background-color: #4a4a4a;
-}
-@media (max-width:490px){
-    nav {flex-direction: column;}
-    nav div{flex-direction: column;}
-    nav div a{margin:.2rem 6px;}
 
+nav div a:hover {
+    background-color: #4a4a4a;
 }
 
+@media (max-width:490px) {
+    nav {
+        flex-direction: column;
+    }
+    nav div {
+        flex-direction: column;
+    }
+    nav div a {
+        margin: .2rem 6px;
+    }
+}
 
-.texto{
-    width:70%;
+.texto {
+    width: 70%;
     max-width: 900px;
-    margin:0 auto;
+    margin: 0 auto;
 }
-.center{
+
+.center {
     text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:875px) {
+    .flex {
+        flex-direction: column;
+    }
+}
+
+form {
+    margin: 0 auto 2rem;
+    width: 400px;
+    padding: 1rem;
+    border: 1px solid #888888;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px black, 5px 3px 8px 3px gray, 2px 8px 5px darkslategray;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
+
+.flex_ar {
+    display: flex;
+    justify-content: space-around;
+}
+
+#img {
+    text-shadow: 0 0 2px white;
 }
