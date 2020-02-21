@@ -1,3 +1,5 @@
+/*Generales*/
+
 * {
     margin: 0px;
     padding: 0px;
@@ -6,14 +8,34 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
     color: #222222;
-    background-color: #dddddd;
 }
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 13rem auto 3rem;
+    margin: 0 auto 3rem;
+    padding-top: 13rem;
     text-align: center;
 }
+
+.texto {
+    font-size: 1.2rem;
+    width: 70%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 8px #dddddd;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* barra de navegacion, fuera del flow*/
 
 nav {
     display: inline-flex;
@@ -61,32 +83,6 @@ nav div a:hover {
     }
 }
 
-footer {
-    display: inline-flex;
-    justify-content: space-around;
-    width: 100%;
-    background-color: #222222aa;
-    padding: 0.5rem 0;
-    position: fixed;
-    bottom: 0;
-    color: #dddddd;
-}
-
-.texto {
-    width: 70%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.center {
-    text-align: center;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-}
-
 .sec {
     flex-direction: row-reverse;
 }
@@ -99,6 +95,15 @@ footer {
         display: none;
     }
 }
+
+#logo {
+    margin: 0 5px;
+    height: 35px;
+    width: 35px;
+}
+
+
+/*formulario*/
 
 form {
     margin: 0 auto 2rem;
@@ -114,33 +119,44 @@ textarea:focus {
     border-color: #000;
 }
 
-.flex_ar {
-    display: flex;
-    justify-content: space-around;
+#fondo {
+    background-color: #dddddd;
 }
 
-#img {
-    background-color: initial;
-    background: url("../imgs/main.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
+
+/*sombra exclusiva del titulo*/
 
 #text_home {
-    color: white;
-    text-shadow: 0 0 4px #222222, 2px 2px 8px #dddddd;
+    color: #111111;
+    text-shadow: 3px 4px 4px #333333;
 }
 
-#logo {
-    margin: 0 5px;
-    height: 35px;
-    width: 35px;
-}
+
+/*posición de la foto*/
 
 #adem {
     position: absolute;
     top: 15rem;
     right: 2%;
     height: 18rem;
+}
+
+
+/* $%&·$&%"·$&%·"%&$"·&/·%&$%U/ */
+
+.img {
+    background: url("../imgs/dust.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.opa {
+    background-color: #eeeeeeaa;
+    height: 100vh;
+}
+
+.opa2 {
+    background-color: #eeeeeeaa;
+    background-size: cover;
 }
