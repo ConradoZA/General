@@ -35,7 +35,7 @@ h1 {
 }
 
 
-/* barra de navegacion, fuera del flow*/
+/* barra de navegacion */
 
 nav {
     display: inline-flex;
@@ -63,7 +63,7 @@ nav div a {
     padding: .2rem 13px;
     margin: auto .5rem;
     border-radius: 7px;
-    transition: all 300ms linear;
+    transition: all 350ms linear;
     box-shadow: 2px 2px 2px #dddddd inset, -2px -2px 4px #111111 inset;
 }
 
@@ -74,32 +74,49 @@ nav div a:hover {
 @media (max-width:490px) {
     nav {
         flex-direction: column;
+        align-items: center;
     }
     nav div {
         flex-direction: column;
     }
     nav div a {
         margin: .2rem 6px;
-    }
-}
-
-.sec {
-    flex-direction: row-reverse;
-}
-
-@media (max-width:875px) {
-    .flex {
-        flex-direction: column;
-    }
-    #adem {
-        display: none;
+        width: 10rem;
     }
 }
 
 #logo {
     margin: 0 5px;
     height: 35px;
-    width: 35px;
+    width: 45px;
+}
+
+
+/* fondo de pantalla */
+
+.imag {
+    background: url("../imgs/dust.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.opa {
+    background-color: #eeeeeeaa;
+    height: 100vh;
+    width: 100vw;
+}
+
+.opa2 {
+    background-color: #eeeeeeaa;
+}
+
+
+/*sombra exclusiva del titulo*/
+
+#text_home {
+    color: #111111;
+    text-shadow: 3px 4px 4px #333333;
 }
 
 
@@ -123,40 +140,61 @@ textarea:focus {
     background-color: #dddddd;
 }
 
-
-/*sombra exclusiva del titulo*/
-
-#text_home {
-    color: #111111;
-    text-shadow: 3px 4px 4px #333333;
+@media (max-width:875px) {
+    .flex {
+        flex-direction: column;
+    }
 }
 
 
 /*posición de la foto*/
 
-#adem {
-    position: absolute;
-    top: 15rem;
-    right: 2%;
-    height: 18rem;
+.foto {
+    display: block;
+    margin: 1rem auto;
+    width: 16rem;
 }
 
 
-/* $%&·$&%"·$&%·"%&$"·&/·%&$%U/ */
+/*Animación mago*/
 
-.img {
-    background: url("../imgs/dust.jpg");
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+.mage {
+    position: fixed;
+    bottom: 0;
+    animation: mover 15s linear infinite;
 }
 
-.opa {
-    background-color: #eeeeeeaa;
-    height: 100vh;
+.move {
+    animation: andar 800ms infinite;
 }
 
-.opa2 {
-    background-color: #eeeeeeaa;
-    background-size: cover;
+@keyframes mover {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 99%;
+        transform: rotateY(0deg);
+    }
+    51% {
+        transform: rotateY(180deg);
+    }
+    99% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes andar {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
 }
