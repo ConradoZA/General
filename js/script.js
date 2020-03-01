@@ -197,19 +197,12 @@ document.querySelector("#contacbtn").addEventListener('click', () => {
 })
 
 
-/*window.addEventListener('load', () => {
-    document.onmousemove(e) => {
+window.addEventListener('load', () => {
+    document.onmousemove = (e) => {
         document.getElementById("onda").style.left = (e.pageX - 18) + "px";
         document.getElementById("onda").style.top = (e.pageY - 18) + "px";
     }
-})*/
-
-window.onload = function() {
-    document.onmousemove = function(e) {
-        document.getElementById("onda").style.left = (e.pageX - 18) + "px";
-        document.getElementById("onda").style.top = (e.pageY - 18) + "px";
-    }
-}
+});
 
 var contador = 0;
 var target = Math.round(Math.random() * 5 + 1);
@@ -219,7 +212,6 @@ window.addEventListener("click", () => {
         contador = 0;
         target = Math.round(Math.random() * 5 + 1);
         document.getElementById('onda').style.visibility = "visible";
-        /* setTimeout(document.getElementById('onda').style.visibility = "hidden", 1500);*/
+        setTimeout(() => { document.getElementById('onda').style.visibility = "hidden" }, 1500);
     }
-
 })
