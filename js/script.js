@@ -138,13 +138,15 @@ const Contacto = `
     </div>
 </div>
 `;
+/*Botón de "otro" activa el campo de "cuál?"*/
 const addFocusListenerToOther = () => {
-    const otherInput = document.querySelector("#fun_id");
-    otherInput.removeAttribute('disabled')
-    const disableOther = () => otherInput.setAttribute('disabled', true)
-    document.getElementById('female').addEventListener('focus', disableOther)
-    document.getElementById('male').addEventListener('focus', disableOther)
-}
+        const otherInput = document.querySelector("#fun_id");
+        otherInput.removeAttribute('disabled')
+        const disableOther = () => otherInput.setAttribute('disabled', true)
+        document.getElementById('female').addEventListener('focus', disableOther)
+        document.getElementById('male').addEventListener('focus', disableOther)
+    }
+    /*Injección de contenido según se pulsen los botones*/
 const main = document.querySelector('main')
 window.addEventListener('load', () => {
     if (window.location.hash === '#quien') {
@@ -165,7 +167,6 @@ window.addEventListener('load', () => {
         })
     }
 })
-
 
 document.querySelector("#homebtn").addEventListener('click', () => {
     main.innerHTML = Home;
@@ -196,7 +197,7 @@ document.querySelector("#contacbtn").addEventListener('click', () => {
     history.pushState({}, '', '#contact');
 })
 
-
+/*onda en el puntero*/
 window.addEventListener('load', () => {
     document.onmousemove = (e) => {
         document.getElementById("onda").style.left = (e.pageX - 18) + "px";
@@ -205,12 +206,12 @@ window.addEventListener('load', () => {
 });
 
 var contador = 0;
-var target = Math.round(Math.random() * 5 + 1);
+var target = Math.round((Math.random() * 5) + 1);
 window.addEventListener("click", () => {
     contador++;
     if (contador === target) {
         contador = 0;
-        target = Math.round(Math.random() * 5 + 1);
+        target = Math.round((Math.random() * 5) + 1);
         document.getElementById('onda').style.visibility = "visible";
         setTimeout(() => { document.getElementById('onda').style.visibility = "hidden" }, 1500);
     }

@@ -286,6 +286,9 @@ textarea:focus {
     }
 }
 
+
+/*Media querys generales*/
+
 @media (max-width:800px) {
     .flex {
         flex-direction: column;
